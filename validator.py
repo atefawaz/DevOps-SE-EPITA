@@ -14,7 +14,7 @@ def validate(values):
     elif not 1024 <= int(port) <= 65535: 
         errors.append("APP_PORT is out of range")
         # checks if debug is false
-    if values.get('DEBUG',"").lower() != 'false' :
+    if values.get('DEBUG',"") != 'false' :
         errors.append("DEBUG must be false")
         # checks if db host is empty
     if values.get('DB_HOST',"").strip() == "" :    
